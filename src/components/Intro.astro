@@ -1,0 +1,35 @@
+---
+import dribLogo from "../assets/drib-logo.svg?url";
+---
+
+<div class="container">
+    <div class="row">
+        <div class="col-6 d-flex justify-content-end">
+            <img
+                class="logo align-self-center"
+                src={dribLogo}
+                alt="Drib logo"
+            />
+        </div>
+
+        <div class="col-6 d-flex justify-content-start">
+            <h1 class="align-self-center">The Drib Programming Language</h1>
+        </div>
+    </div>
+</div>
+
+<style>
+    .container {
+        height: 400px;
+        color: var(--ctp-frappe-blue);
+    }
+
+    .logo {
+        height: auto;
+        max-width: 100px;
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: invert(65%) sepia(50%) saturate(563%) hue-rotate(191deg)
+            brightness(96%) contrast(94%);
+    }
+</style>
