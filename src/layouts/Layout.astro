@@ -20,10 +20,20 @@ import Navbar from "../components/Navbar.astro";
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/@catppuccin/palette/css/catppuccin.css"
 		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&family=Montserrat&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
 		<Navbar />
 		<slot />
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
+			integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
+			crossorigin="anonymous"></script>
 	</body>
 </html>
 
@@ -33,6 +43,6 @@ import Navbar from "../components/Navbar.astro";
 		margin: 0;
 		width: 100%;
 		height: 100%;
-		background-color: var(--ctp-frappe-crust);
+		background-color: var(--ctp-mocha-crust);
 	}
 </style>

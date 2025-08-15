@@ -3,33 +3,66 @@ import dribLogo from "../assets/drib-logo.svg?url";
 ---
 
 <div class="container">
-    <div class="row">
-        <div class="col-6 d-flex justify-content-end">
-            <img
-                class="logo align-self-center"
-                src={dribLogo}
-                alt="Drib logo"
-            />
+    <div class="row d-flex align-items-center">
+        <div class="col-12 col-md-6 d-flex justify-content-center">
+            <img class="logo" src={dribLogo} alt="Drib logo" />
         </div>
 
-        <div class="col-6 d-flex justify-content-start">
-            <h1 class="align-self-center">The Drib Programming Language</h1>
+        <div
+            class="col-12 col-md-6 d-flex justify-content-start text-center text-md-start"
+        >
+            <h1>The Drib Programming Language</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row d-flex align-items-center">
+        <div
+            class="col-12 col-md-6 d-flex justify-content-start text-center text-md-start"
+        >
+            <h1>Familiar Syntax</h1>
+        </div>
+
+        <div
+            class="col-12 col-md-6 d-flex justify-content-start text-center text-md-start"
+        >
         </div>
     </div>
 </div>
 
 <style>
     .container {
-        height: 400px;
-        color: var(--ctp-frappe-blue);
+        height: 500px;
+        color: var(--ctp-mocha-blue);
+    }
+
+    .row {
+        height: 100%;
     }
 
     .logo {
-        height: auto;
-        max-width: 100px;
+        height: 140px;
+        max-width: auto;
         -webkit-transform: scaleX(-1);
         transform: scaleX(-1);
         filter: invert(65%) sepia(50%) saturate(563%) hue-rotate(191deg)
             brightness(96%) contrast(94%);
+    }
+
+    h1 {
+        font-weight: 300;
+        font-size: 3rem;
+        font-family: "Montserrat", sans-serif;
+        background: linear-gradient(
+            to right,
+            var(--ctp-mocha-sapphire),
+            var(--ctp-mocha-mauve)
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+        background-size: 100% auto;
     }
 </style>
