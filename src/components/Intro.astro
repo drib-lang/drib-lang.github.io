@@ -49,13 +49,16 @@ import dribLogo from "../assets/drib-logo.svg?url";
                     <span class="keyword">val</span>
                     <span>a</span>
                     <span class="operator">=</span>
-                    <span>0</span>;
+                    <span class="function">sum</span><span class="brace">(</span
+                    ><span>40</span><span>,</span>
+                    <span>2</span><span class="brace">)</span>;
                 </div>
                 <div class="card-body pt-0">
-                    <span class="keyword">val</span>
-                    <span>b</span>
-                    <span class="operator">=</span>
-                    <span>8</span>;
+                    <span class="function">print</span><span class="brace"
+                        >(</span
+                    ><span class="string">"I found the answer!"</span><span
+                        class="brace">)</span
+                    >;
                 </div>
             </div>
         </div>
@@ -119,5 +122,9 @@ import dribLogo from "../assets/drib-logo.svg?url";
 
     .operator {
         color: var(--ctp-mocha-sky);
+    }
+
+    .string {
+        color: var(--ctp-mocha-green);
     }
 </style>
