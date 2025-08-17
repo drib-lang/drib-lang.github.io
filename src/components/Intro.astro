@@ -105,9 +105,15 @@ import dribLogo from "../assets/drib-logo.svg?url";
                 var(--ctp-mocha-sapphire),
                 var(--ctp-mocha-mauve)
             );
+            transition: transform 0.2s ease;
         }
 
         button:hover {
+            transform: scale(1.08);
+        }
+
+        button:active {
+            transform: scale(1.05);
         }
     }
 
