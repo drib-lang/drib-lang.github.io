@@ -2,8 +2,8 @@
 import dribLogo from "../assets/drib-logo.svg?url";
 ---
 
-<div class="container">
-    <div class="row d-flex align-items-center">
+<div class="container height-450">
+    <div class="row d-flex align-items-center height-450">
         <div class="col-12 col-md-6 d-flex justify-content-center">
             <img class="logo" src={dribLogo} alt="Drib logo" />
         </div>
@@ -16,7 +16,7 @@ import dribLogo from "../assets/drib-logo.svg?url";
     </div>
 </div>
 
-<div class="container">
+<div class="container height-450">
     <div class="row d-flex align-items-center">
         <div
             class="col-12 col-md-6 d-flex justify-content-center text-center text-md-start"
@@ -65,14 +65,50 @@ import dribLogo from "../assets/drib-logo.svg?url";
     </div>
 </div>
 
+<div class="container-fluid height-300">
+    <div class="row d-flex align-items-center">
+        <div class="col-12 d-flex justify-content-center">
+            this is an example
+        </div>
+    </div>
+    <div class="row d-flex align-items-center">
+        <div class="col-12 d-flex justify-content-center">
+            <button type="button" class="btn btn-primary">Get started</button>
+        </div>
+    </div>
+</div>
+
 <style>
-    .container {
+    .height-450 {
         height: 450px;
-        color: var(--ctp-mocha-blue);
+
+        .row {
+            height: 100%;
+        }
     }
 
-    .row {
-        height: 100%;
+    .height-300 {
+        height: 120px;
+
+        .row {
+            height: 50%;
+        }
+
+        button {
+            border-radius: 26px;
+            border: none;
+            height: 52px;
+            width: 170px;
+
+            background: linear-gradient(
+                to right,
+                var(--ctp-mocha-sapphire),
+                var(--ctp-mocha-mauve)
+            );
+        }
+
+        button:hover {
+        }
     }
 
     .logo {
