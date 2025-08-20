@@ -1,0 +1,41 @@
+---
+import dribLogo from "../assets/drib-logo.svg?url";
+---
+
+<div class="container-fluid height-150">
+    <div class="row d-flex align-items-center">
+        <div class="col-6 d-flex justify-content-end">
+            <img class="logo" src={dribLogo} alt="Drib logo" />
+        </div>
+        <div class="col-6 d-flex justify-content-start">
+            <h1>Drib</h1>
+        </div>
+    </div>
+</div>
+
+<style>
+    .height-150 {
+        height: 150px;
+    }
+
+    .container-fluid {
+        background-color: var(--ctp-mocha-base);
+
+        .row {
+            height: 100%;
+
+            h1 {
+                color: var(--ctp-mocha-text);
+            }
+
+            img {
+                height: 70px;
+                max-width: auto;
+                -webkit-transform: scaleX(-1);
+                transform: scaleX(-1);
+                filter: invert(91%) sepia(85%) saturate(6151%)
+                    hue-rotate(178deg) brightness(100%) contrast(91%);
+            }
+        }
+    }
+</style>
