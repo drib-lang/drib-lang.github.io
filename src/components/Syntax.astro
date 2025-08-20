@@ -1,21 +1,3 @@
----
-import dribLogo from "../assets/drib-logo.svg?url";
----
-
-<div class="container height-450">
-    <div class="row d-flex align-items-center height-450">
-        <div class="col-12 col-md-6 d-flex justify-content-center">
-            <img class="logo" src={dribLogo} alt="Drib logo" />
-        </div>
-
-        <div
-            class="col-12 col-md-6 d-flex justify-content-start text-center text-md-start"
-        >
-            <h1>The Drib Programming Language</h1>
-        </div>
-    </div>
-</div>
-
 <div class="container height-450">
     <div class="row d-flex align-items-center">
         <div
@@ -65,19 +47,6 @@ import dribLogo from "../assets/drib-logo.svg?url";
     </div>
 </div>
 
-<div class="container-fluid height-300">
-    <div class="row d-flex align-items-center">
-        <div class="col-12 d-flex justify-content-center">
-            this is an example
-        </div>
-    </div>
-    <div class="row d-flex align-items-center">
-        <div class="col-12 d-flex justify-content-center">
-            <button type="button" class="btn btn-primary">Get started</button>
-        </div>
-    </div>
-</div>
-
 <style>
     .height-450 {
         height: 450px;
@@ -85,45 +54,6 @@ import dribLogo from "../assets/drib-logo.svg?url";
         .row {
             height: 100%;
         }
-    }
-
-    .height-300 {
-        height: 120px;
-
-        .row {
-            height: 50%;
-        }
-
-        button {
-            border-radius: 26px;
-            border: none;
-            height: 52px;
-            width: 170px;
-
-            background: linear-gradient(
-                to right,
-                var(--ctp-mocha-sapphire),
-                var(--ctp-mocha-mauve)
-            );
-            transition: transform 0.2s ease;
-        }
-
-        button:hover {
-            transform: scale(1.08);
-        }
-
-        button:active {
-            transform: scale(1.05);
-        }
-    }
-
-    .logo {
-        height: 140px;
-        max-width: auto;
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
-        filter: invert(65%) sepia(50%) saturate(563%) hue-rotate(191deg)
-            brightness(96%) contrast(94%);
     }
 
     h1 {

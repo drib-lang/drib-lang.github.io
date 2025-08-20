@@ -1,0 +1,110 @@
+---
+import dribLogo from "../assets/drib-logo.svg?url";
+---
+
+<div class="container height-450">
+    <div class="row d-flex align-items-center height-450">
+        <div class="col-12 col-md-6 d-flex justify-content-center">
+            <img class="logo" src={dribLogo} alt="Drib logo" />
+        </div>
+
+        <div
+            class="col-12 col-md-6 d-flex justify-content-start text-center text-md-start"
+        >
+            <h1>The Drib Programming Language</h1>
+        </div>
+    </div>
+</div>
+
+<style>
+    .height-450 {
+        height: 450px;
+
+        .row {
+            height: 100%;
+        }
+    }
+
+    .height-300 {
+        height: 120px;
+
+        .row {
+            height: 50%;
+        }
+
+        button {
+            border-radius: 26px;
+            border: none;
+            height: 52px;
+            width: 170px;
+
+            background: linear-gradient(
+                to right,
+                var(--ctp-mocha-sapphire),
+                var(--ctp-mocha-mauve)
+            );
+            transition: transform 0.2s ease;
+        }
+
+        button:hover {
+            transform: scale(1.08);
+        }
+
+        button:active {
+            transform: scale(1.05);
+        }
+    }
+
+    .logo {
+        height: 140px;
+        max-width: auto;
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: invert(65%) sepia(50%) saturate(563%) hue-rotate(191deg)
+            brightness(96%) contrast(94%);
+    }
+
+    h1 {
+        font-weight: 300;
+        font-size: 3rem;
+        font-family: "Montserrat", sans-serif;
+        background: linear-gradient(
+            to right,
+            var(--ctp-mocha-sapphire),
+            var(--ctp-mocha-mauve)
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+        background-size: 100% auto;
+    }
+
+    .card {
+        width: 100%;
+        background-color: var(--ctp-mocha-mantle);
+        font-family: "JetBrains Mono", monospace;
+        color: var(--ctp-mocha-subtext1);
+    }
+
+    .brace {
+        color: var(--ctp-mocha-red);
+    }
+
+    .keyword {
+        color: var(--ctp-mocha-mauve);
+    }
+
+    .function {
+        color: var(--ctp-mocha-blue);
+        font-style: italic;
+    }
+
+    .operator {
+        color: var(--ctp-mocha-sky);
+    }
+
+    .string {
+        color: var(--ctp-mocha-green);
+    }
+</style>
