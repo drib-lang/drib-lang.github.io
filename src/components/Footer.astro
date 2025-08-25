@@ -4,11 +4,16 @@ import dribLogo from "../assets/drib-logo.svg?url";
 
 <div class="container-fluid height-150">
     <div class="row d-flex align-items-center">
-        <div class="col-6 d-flex justify-content-end">
+        <div class="col-6 d-flex justify-content-end align-items-start">
             <img class="logo" src={dribLogo} alt="Drib logo" />
+            <h2 class="ms-2">Drib</h2>
         </div>
-        <div class="col-6 d-flex justify-content-start">
-            <h1>Drib</h1>
+        <div class="col-6 d-flex justify-content-start"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <p>© Drib</p>
         </div>
     </div>
 </div>
@@ -22,14 +27,15 @@ import dribLogo from "../assets/drib-logo.svg?url";
         background-color: var(--ctp-mocha-base);
 
         .row {
-            height: 100%;
+            height: 50%;
 
-            h1 {
+            h2 {
                 color: var(--ctp-mocha-text);
+                line-height: 27px;
             }
 
             img {
-                height: 70px;
+                height: 27px;
                 max-width: auto;
                 -webkit-transform: scaleX(-1);
                 transform: scaleX(-1);

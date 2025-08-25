@@ -2,124 +2,70 @@
 import dribLogo from "../assets/drib-logo.svg?url";
 ---
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container">
-        <a class="navbar-brand" href="#">Drib</a>
-
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
-            aria-label="Toggle navigation"
-        >
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<div class="container-fluid">
+    <div class="row d-flex align-items-center">
+        <div class="col-6 d-flex justify-content-center align-items-center">
+            <a href="#">
+                <img src={dribLogo} class="my-0 mx-0" />
+            </a>
+        </div>
 
         <div
-            class="offcanvas offcanvas-end"
-            tabindex="-1"
-            id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel"
+            class="col-6 d-flex justify-content-center align-items-center h-100"
         >
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                    <img class="logo" src={dribLogo} alt="Drib logo" />
-                </h5>
-                <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="offcanvas"
-                    aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"
-                            >Docs</a
-                        >
-                    </li>
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            href="https://github.com/drib-lang/drib">GitHub</a
-                        >
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Brand</a>
-                    </li>
-                </ul>
+            <div class="container-fluid text-center list">
+                <div class="row">
+                    <a
+                        class="col d-flex justify-content-center align-items-center"
+                        href="#"><div>Docs</div></a
+                    >
+                    <a
+                        class="col d-flex justify-content-center align-items-center"
+                        href="https://github.com/drib-lang/"
+                        target="_blank"><div>GitHub</div></a
+                    >
+                    <a
+                        class="col d-flex justify-content-center align-items-center"
+                        href="#"><div>Brand</div></a
+                    >
+                </div>
             </div>
         </div>
     </div>
-</nav>
+</div>
 
 <style>
-    .navbar {
-        height: 70px;
-        background-color: var(--ctp-mocha-mantle) !important;
-        font-family: "Montserrat", sans-serif;
-        font-weight: 400;
+    .container-fluid {
+        min-height: 50px;
+        background-color: var(--color-main);
     }
 
-    .navbar a {
-        color: var(--ctp-mocha-blue);
+    .container-fluid .row {
+        height: 50px !important;
     }
 
-    .navbar img {
-        height: 40px;
-        max-width: auto;
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
-        filter: invert(65%) sepia(50%) saturate(563%) hue-rotate(191deg)
-            brightness(96%) contrast(94%);
+    .list {
+        text-decoration: none;
+        color: var(--color-white) !important;
+
+        a,
+        a:hover,
+        a:visited {
+            text-decoration: none;
+            color: var(--color-white) !important;
+        }
     }
 
-    .offcanvas {
-        background-color: rgba(
-            var(--ctp-mocha-mantle-rgb, 68, 71, 90)
-        ) !important;
+    .list .col:hover {
+        background-color: var(--color-secondary);
     }
 
-    .navbar-toggler {
-        border-color: transparent !important;
-    }
-    .navbar-toggler-icon {
-        background-image: none !important;
-        position: relative;
-    }
-    .navbar-toggler-icon::before {
-        content: "";
-        display: block;
-        width: 1.5em;
-        height: 1.5em;
-        background: none;
-        mask: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='black' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
-            center/contain no-repeat;
-        -webkit-mask: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='black' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
-            center/contain no-repeat;
-        background-color: var(--ctp-mocha-blue);
-    }
+    a {
+        text-decoration: none;
 
-    .btn-close {
-        filter: none !important;
-        background: none !important;
-        color: var(--ctp-mocha-blue) !important;
-        opacity: 1 !important;
-    }
-    .btn-close svg {
-        fill: var(--ctp-mocha-blue) !important;
-    }
-    .btn-close::before {
-        content: "";
-        display: block;
-        width: 1em;
-        height: 1em;
-        mask: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath stroke='black' stroke-width='2' d='M2 2l12 12M14 2L2 14'/%3e%3c/svg%3e")
-            center/contain no-repeat;
-        -webkit-mask: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath stroke='black' stroke-width='2' d='M2 2l12 12M14 2L2 14'/%3e%3c/svg%3e")
-            center/contain no-repeat;
-        background-color: var(--ctp-mocha-blue);
+        img {
+            height: 35px;
+            filter: invert(1);
+        }
     }
 </style>
