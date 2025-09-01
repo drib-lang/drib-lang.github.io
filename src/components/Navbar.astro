@@ -2,70 +2,25 @@
 import dribLogo from "../assets/drib-logo.svg?url";
 ---
 
-<div class="container-fluid">
-    <div class="row d-flex align-items-center">
-        <div class="col-6 d-flex justify-content-center align-items-center">
-            <a href="#">
-                <img src={dribLogo} class="my-0 mx-0" />
-            </a>
-        </div>
-
-        <div
-            class="col-6 d-flex justify-content-center align-items-center h-100"
-        >
-            <div class="container-fluid text-center list">
-                <div class="row">
-                    <a
-                        class="col d-flex justify-content-center align-items-center"
-                        href="#"><div>Docs</div></a
-                    >
-                    <a
-                        class="col d-flex justify-content-center align-items-center"
-                        href="https://github.com/drib-lang/"
-                        target="_blank"><div>GitHub</div></a
-                    >
-                    <a
-                        class="col d-flex justify-content-center align-items-center"
-                        href="#"><div>Brand</div></a
-                    >
-                </div>
-            </div>
-        </div>
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand ms-4" href="#">drib</a>
     </div>
-</div>
+</nav>
 
 <style>
-    .container-fluid {
-        min-height: 50px;
-        background-color: var(--color-main);
-    }
+    nav {
+        height: 50px;
+        font-family: "Bytesized", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        background-color: var(--color-main) !important;
 
-    .container-fluid .row {
-        height: 50px !important;
-    }
-
-    .list {
-        text-decoration: none;
-        color: var(--color-white) !important;
-
-        a,
-        a:hover,
-        a:visited {
-            text-decoration: none;
+        a {
+            line-height: 0px;
+            letter-spacing: 3px;
+            font-size: 24px !important;
             color: var(--color-white) !important;
-        }
-    }
-
-    .list .col:hover {
-        background-color: var(--color-secondary);
-    }
-
-    a {
-        text-decoration: none;
-
-        img {
-            height: 35px;
-            filter: invert(1);
         }
     }
 </style>

@@ -2,109 +2,89 @@
 import dribLogo from "../assets/drib-logo.svg?url";
 ---
 
-<div class="container height-450">
-    <div class="row d-flex align-items-center height-450">
-        <div class="col-12 col-md-6 d-flex justify-content-center">
-            <img class="logo" src={dribLogo} alt="Drib logo" />
+<div class="container-fluid">
+    <div class="row py-4">
+        <div class="col d-flex align-items-end justify-content-center">
+            <img src={dribLogo} alt="" srcset="" />
         </div>
-
-        <div
-            class="col-12 col-md-6 d-flex justify-content-start text-center text-md-start"
-        >
-            <h1>The Drib Programming Language</h1>
+    </div>
+    <div class="row">
+        <div class="col d-flex align-items-start justify-content-center">
+            <h1>drib</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col d-flex align-items-center justify-content-center p-4">
+            <pre><code>val sum = sum(x, y) &#123;return x + y;&#125;;<br />val ans = sum(40, 2);<br />println("I found the answer!");</code></pre>
+        </div>
+        <div class="col d-flex align-items-center justify-content-center p-4">
+            <p class="mx-4 text-center">
+                A tiny, dynamic, open source programming language that was
+                written in <span>Kotlin</span>.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col d-flex align-items-center justify-content-center py-4">
+            <button class="btn btn-primary">Get started</button>
         </div>
     </div>
 </div>
 
 <style>
-    .height-450 {
-        height: 450px;
+    .container-fluid {
+        height: fit-content;
+        background: radial-gradient(
+            circle at 30% 110%,
+            #89e051 0%,
+            #f1e05a 20%,
+            #a97bff 60%,
+            #00add8 100%
+        );
 
         .row {
-            height: 100%;
+            height: calc(100% / 4);
         }
     }
 
-    .height-300 {
-        height: 120px;
-
-        .row {
-            height: 50%;
-        }
-
-        button {
-            border-radius: 26px;
-            border: none;
-            height: 52px;
-            width: 170px;
-
-            background: linear-gradient(
-                to right,
-                var(--ctp-mocha-sapphire),
-                var(--ctp-mocha-mauve)
-            );
-            transition: transform 0.2s ease;
-        }
-
-        button:hover {
-            transform: scale(1.08);
-        }
-
-        button:active {
-            transform: scale(1.05);
-        }
-    }
-
-    .logo {
-        height: 140px;
-        max-width: auto;
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
-        filter: invert(65%) sepia(50%) saturate(563%) hue-rotate(191deg)
-            brightness(96%) contrast(94%);
+    img {
+        height: 150px;
+        filter: invert(12%) sepia(18%) saturate(14%) hue-rotate(129deg)
+            brightness(101%) contrast(91%) !important;
     }
 
     h1 {
-        font-weight: 300;
-        font-size: 3rem;
-        font-family: "Montserrat", sans-serif;
-        background: linear-gradient(
-            to right,
-            var(--ctp-mocha-sapphire),
-            var(--ctp-mocha-mauve)
-        );
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-fill-color: transparent;
-        background-size: 100% auto;
+        font-family: "Bytesized", sans-serif;
+        font-weight: 400;
+        font-size: 150px;
+        letter-spacing: 10px;
+        font-style: normal;
+        text-align: center;
+        color: var(--color-black);
     }
 
-    .card {
-        width: 100%;
-        background-color: var(--ctp-mocha-mantle);
+    p {
+        font-size: 21px;
+        color: var(--color-black);
+    }
+
+    code {
         font-family: "JetBrains Mono", monospace;
-        color: var(--ctp-mocha-subtext1);
+        color: var(--color-black);
     }
 
-    .brace {
-        color: var(--ctp-mocha-red);
+    button {
+        width: 150px;
+        height: 50px;
+        border: 1px var(--color-black-darker);
+        border-radius: 10px;
+        background-color: var(--color-black);
     }
 
-    .keyword {
-        color: var(--ctp-mocha-mauve);
-    }
-
-    .function {
-        color: var(--ctp-mocha-blue);
-        font-style: italic;
-    }
-
-    .operator {
-        color: var(--ctp-mocha-sky);
-    }
-
-    .string {
-        color: var(--ctp-mocha-green);
+    button:hover,
+    button:active,
+    button:focus,
+    button {
+        background-color: var(--color-black-pale);
     }
 </style>
