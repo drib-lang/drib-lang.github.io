@@ -15,7 +15,7 @@ import dribLogo from "../assets/drib-logo.svg?url";
     </div>
     <div class="row">
         <div class="col d-flex align-items-center justify-content-center p-4">
-            <pre><code>val sum = sum(x, y) &#123;return x + y;&#125;;<br />val ans = sum(40, 2);<br />println("I found the answer!");</code></pre>
+            <pre><code>val sum = sum(x, y) &#123; return x + y; &#125;;<br />val ans = sum(40, 2);<br />println("I found the answer!");</code></pre>
         </div>
         <div class="col d-flex align-items-center justify-content-center p-4">
             <p class="mx-4 text-center">
@@ -35,11 +35,9 @@ import dribLogo from "../assets/drib-logo.svg?url";
     .container-fluid {
         height: fit-content;
         background: radial-gradient(
-            circle at 30% 110%,
-            #89e051 0%,
-            #f1e05a 20%,
-            #a97bff 60%,
-            #00add8 100%
+            circle at 50% 130%,
+            #f1e05a 10%,
+            #a97bff 100%
         );
 
         .row {
@@ -70,6 +68,7 @@ import dribLogo from "../assets/drib-logo.svg?url";
 
     code {
         font-family: "JetBrains Mono", monospace;
+        font-size: 15px;
         color: var(--color-black);
     }
 
@@ -86,5 +85,21 @@ import dribLogo from "../assets/drib-logo.svg?url";
     button:focus,
     button {
         background-color: var(--color-black-pale);
+    }
+
+    .btn.btn-primary {
+        background-color: var(--color-black) !important;
+        border: 1px solid var(--color-black-darker) !important;
+        color: var(--color-white) !important;
+    }
+
+    .btn.btn-primary:hover,
+    .btn.btn-primary:focus {
+        background-color: var(--color-black-pale) !important;
+        color: var(--color-white) !important;
+    }
+
+    .btn.btn-primary:active {
+        background-color: var(--color-black) !important;
     }
 </style>
