@@ -1,11 +1,12 @@
 ---
 import dribLogo from "../assets/drib-logo.svg?url";
+import book from "../assets/book-half.svg?url";
 ---
 
 <div class="container-fluid">
     <div class="row py-4">
         <div class="col d-flex align-items-end justify-content-center">
-            <img src={dribLogo} alt="" srcset="" />
+            <img src={dribLogo} class="logo" />
         </div>
     </div>
     <div class="row">
@@ -24,9 +25,17 @@ import dribLogo from "../assets/drib-logo.svg?url";
             </p>
         </div>
     </div>
-    <div class="row">
+    <div class="row pb-2">
         <div class="col d-flex align-items-center justify-content-center py-4">
-            <button class="btn btn-primary">Get started</button>
+            <button class="btn btn-primary"
+                ><img
+                    src={book}
+                    alt="Bootstrap"
+                    width="20"
+                    height="20"
+                    class="me-2"
+                />Read the docs</button
+            >
         </div>
     </div>
 </div>
@@ -34,18 +43,19 @@ import dribLogo from "../assets/drib-logo.svg?url";
 <style>
     .container-fluid {
         height: fit-content;
-        background: radial-gradient(
-            circle at 50% 130%,
-            #f1e05a 10%,
+        background-color: var(--color-main-pale);
+        /* background: radial-gradient(
+            circle at 50% 180%,
+            #f1e05a 20%,
             #a97bff 100%
-        );
+        ); */
 
         .row {
             height: calc(100% / 4);
         }
     }
 
-    img {
+    .logo {
         height: 150px;
         filter: invert(12%) sepia(18%) saturate(14%) hue-rotate(129deg)
             brightness(101%) contrast(91%) !important;
@@ -73,11 +83,16 @@ import dribLogo from "../assets/drib-logo.svg?url";
     }
 
     button {
-        width: 150px;
-        height: 50px;
+        width: 200px;
+        height: 60px;
         border: 1px var(--color-black-darker);
         border-radius: 10px;
         background-color: var(--color-black);
+
+        img {
+            filter: invert(99%) sepia(1%) saturate(121%) hue-rotate(182deg)
+                brightness(116%) contrast(93%);
+        }
     }
 
     button:hover,
