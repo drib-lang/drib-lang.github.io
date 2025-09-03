@@ -13,18 +13,23 @@ import twitter from "../assets/twitter-x.svg?url";
                 rel="noopener"
                 class="me-4"
             >
-                <img src={twitter} alt="Twitter/X logo" width="32" />
+                <img
+                    src={twitter}
+                    alt="Twitter/X logo"
+                    width="32"
+                    class="logo"
+                />
             </a>
             <a
                 href="https://github.com/drib-lang"
                 target="_blank"
                 rel="noopener"
             >
-                <img src={github} alt="GitHub logo" width="32" />
+                <img src={github} alt="GitHub logo" width="32" class="logo" />
             </a>
         </div>
         <div class="col d-flex align-items-center justify-content-center">
-            <img src={drib} alt="Drib logo" width="80" /><br />
+            <img src={drib} alt="Drib logo" width="80" class="logo" /><br />
         </div>
     </div>
 
@@ -41,9 +46,15 @@ import twitter from "../assets/twitter-x.svg?url";
     .container-fluid {
         height: 220px;
         background-color: var(--color-white);
+        color: var(--color-black) !important;
 
         .row {
             height: 50%;
         }
+    }
+
+    .logo {
+        filter: invert(12%) sepia(18%) saturate(14%) hue-rotate(129deg)
+            brightness(101%) contrast(91%) !important;
     }
 </style>
