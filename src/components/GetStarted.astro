@@ -1,43 +1,68 @@
-<div class="container-fluid height-120">
-    <div class="row d-flex align-items-center">
-        <div class="col-12 d-flex justify-content-center">
-            <button type="button" class="btn btn-primary">Get started</button>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col d-flex align-items-end justify-content-start ms-4">
+            <h1>Try Drib today!</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div
+            class="col d-flex align-items-start justify-content-start ms-4 mt-2"
+        >
+            <button class="btn btn-primary">Get started</button>
         </div>
     </div>
 </div>
 
 <style>
-    .height-120 {
-        height: 120px;
+    .container-fluid {
+        height: 250px;
+        background: radial-gradient(
+            circle at 0% 100%,
+            #a97bff 10%,
+            #5594ec 70%,
+            #00add8 100%
+        );
 
         .row {
-            height: 100%;
+            height: 50%;
         }
+    }
 
-        button {
-            border-radius: 26px;
-            border: none;
-            height: 52px;
-            width: 170px;
-            color: var(--ctp-mocha-text);
+    h1 {
+        color: var(--color-white);
+        font-weight: 400;
+        letter-spacing: 0.2rem;
+    }
 
-            background: linear-gradient(
-                to right,
-                var(--ctp-mocha-sapphire),
-                var(--ctp-mocha-mauve)
-            );
-            background-size: 100%;
-            transition: transform 0.3s ease;
-        }
+    .btn-primary {
+        height: 50px;
+        width: 160px;
+        border: 1px var(--color-black-darker);
+        border-radius: 30px;
+        background-color: var(--color-black);
+    }
 
-        button:hover {
-            transform: scale(1.08);
-            background-size: 130%;
-        }
+    .btn-primary:hover,
+    .btn-primary:active,
+    .btn-primary:focus,
+    .btn-primary {
+        background-color: var(--color-black-pale);
+    }
 
-        button:active {
-            transform: scale(1.05);
-            color: var(--ctp-mocha-text);
-        }
+    .btn.btn-primary {
+        background-color: var(--color-black) !important;
+        border: 1px solid var(--color-black-darker) !important;
+        color: var(--color-white) !important;
+    }
+
+    .btn.btn-primary:hover,
+    .btn.btn-primary:focus {
+        background-color: var(--color-black-pale) !important;
+        color: var(--color-white) !important;
+    }
+
+    .btn.btn-primary:active {
+        background-color: var(--color-black) !important;
     }
 </style>
