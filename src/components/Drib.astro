@@ -1,64 +1,39 @@
 ---
-import dribLogo from "../assets/drib-logo.svg?url";
-import book from "../assets/book-half.svg?url";
+import dribLogo from "../assets/drib-pp.png?url";
 ---
 
 <div class="container-fluid">
-    <div class="row py-4">
+    <div class="row">
         <div class="col d-flex align-items-end justify-content-center">
             <img src={dribLogo} class="logo" />
         </div>
     </div>
-    <div class="row">
+    <div class="row pb-0">
         <div class="col d-flex align-items-start justify-content-center">
-            <h1 class="text-center">drib</h1>
+            <h1 class="text-center align-self-center">drib</h1>
         </div>
     </div>
-    <div class="row">
-        <div
-            class="col-12 col-md-6 mb-4 d-flex align-items-center justify-content-center p-4"
-        >
-            <pre><code>val sum = sum(x, y) &#123; return x + y; &#125;;<br />val ans = sum(40, 2);<br />println("I found the answer!");</code></pre>
-        </div>
-        <div
-            class="col-12 col-md-6 mb-4 d-flex align-items-center justify-content-center p-4"
-        >
-            <p class="mx-4 text-center">
-                A tiny, dynamic, open source scripting language written in <span
-                    >Kotlin</span
-                >.
+    <div class="row pb-4 pt-0">
+        <div class="col d-flex align-items-start justify-content-center">
+            <p class="text-center align-self-center">
+                a tiny esoteric programming language
             </p>
-        </div>
-    </div>
-    <div class="row pb-2">
-        <div class="col d-flex align-items-center justify-content-center py-4">
-            <button class="btn btn-primary"
-                ><img
-                    src={book}
-                    alt="Bootstrap"
-                    width="20"
-                    height="20"
-                    class="me-2"
-                />Read the docs</button
-            >
         </div>
     </div>
 </div>
 
 <style>
     .container-fluid {
-        height: fit-content;
-        background-color: var(--color-main-pale);
+        height: 70vh;
+        background-color: var(--color-blue);
 
         .row {
-            height: calc(100% / 4);
+            height: calc(100% / 3);
         }
     }
 
     .logo {
-        height: 150px;
-        filter: invert(12%) sepia(18%) saturate(14%) hue-rotate(129deg)
-            brightness(101%) contrast(91%) !important;
+        height: 270px;
     }
 
     h1 {
@@ -68,12 +43,12 @@ import book from "../assets/book-half.svg?url";
         letter-spacing: 10px;
         font-style: normal;
         text-align: center;
-        color: var(--color-black);
+        color: var(--color-main-pale);
     }
 
     p {
         font-size: 21px;
-        color: var(--color-black);
+        color: var(--color-main-pale);
     }
 
     code {

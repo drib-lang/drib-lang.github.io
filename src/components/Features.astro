@@ -1,29 +1,50 @@
+---
+import "bootstrap-icons/font/bootstrap-icons.css";
+---
+
 <div class="container d-flex align-items-center">
-    <div class="row">
+    <div class="row mt-4">
         <div
-            class="col-12 col-md-6 mb-4 d-flex flex-column justify-content-center align-items-center px-4"
+            class="col-12 col-md-6 mb-4 d-flex flex-column justify-content-center align-items-center px-4 py-0"
         >
-            <h1 class="text-center">Simple and familiar</h1>
-            <p class="text-center">
-                Drib is an easy-to-learn programming language similar to the
-                programming languages you already know.
-            </p>
+            <a class="text-center py-0" href="https://github.com/drib-lang/">
+                <i class="bi bi-github"></i>
+                GitHub
+            </a>
         </div>
         <div
-            class="col-12 col-md-6 mb-4 d-flex flex-column justify-content-center align-items-center px-4"
+            class="col-12 col-md-6 mb-4 d-flex flex-column justify-content-center align-items-center px-4 py-0"
         >
-            <h1 class="text-center">Small but powerful!</h1>
-            <p class="text-center">
-                Drib provides functionality for simple arithmetic operations and
-                even image processing.
-            </p>
+            <a class="text-center" href="https://github.com/drib-lang/adi">
+                <i class="bi bi-filetype-py"></i>
+                Interpreter
+            </a>
+        </div>
+        <div
+            class="col-12 col-md-6 mb-4 d-flex flex-column justify-content-center align-items-center px-4 py-0"
+        >
+            <a class="text-center" href="#">
+                <i class="bi bi-wikipedia"></i>
+                Wiki
+            </a>
+        </div>
+        <div
+            class="col-12 col-md-6 mb-4 d-flex flex-column justify-content-center align-items-center px-4 py-0"
+        >
+            <a
+                class="text-center py-0"
+                href="https://github.com/drib-lang/adi/tree/main/examples"
+            >
+                <i class="bi bi-file-code"></i>
+                Examples
+            </a>
         </div>
     </div>
 </div>
 
 <style>
     .container {
-        min-height: 500px;
+        min-height: 30vh;
     }
 
     h1 {
@@ -32,5 +53,23 @@
 
     p {
         color: var(--color-black);
+    }
+
+    .row {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--color-black);
+        font-size: 1.2rem;
+    }
+
+    a:visited,
+    a:hover,
+    a:active {
+        color: var(--color-black);
+        text-decoration: none;
     }
 </style>
