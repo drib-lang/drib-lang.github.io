@@ -15,7 +15,7 @@
 <div class="container">
     <div class="row mt-4">
         <div class="col">
-            <h1>The Drib Prorgamming Language</h1>
+            <h1>The Drib Programming Language</h1>
             <h2>Language version adi 0.8.0 (Dec 14, 2025)</h2>
         </div>
     </div>
@@ -33,10 +33,40 @@
                         <td><a href="#variables">Variables</a></td>
                     </tr>
                     <tr>
-                        <td><a href="#when">when... then</a></td>
+                        <td><a href="#when">when... otherwise</a></td>
                     </tr>
                     <tr>
-                        <td><a href="#built-in">Built-in functions</a></td>
+                        <td
+                            ><a href="#built-in">Built-in functions</a>
+                            <ul class="toc-sub">
+                                <li><a href="#add">add</a></li>
+                                <li><a href="#sub">sub</a></li>
+                                <li><a href="#mul">mul</a></li>
+                                <li><a href="#div">div</a></li>
+                                <li><a href="#pow">pow</a></li>
+                                <li><a href="#mod">mod</a></li>
+                                <li><a href="#gt">gt</a></li>
+                                <li><a href="#lt">lt</a></li>
+                                <li><a href="#geq">geq</a></li>
+                                <li><a href="#leq">leq</a></li>
+                                <li><a href="#eqs">eqs</a></li>
+                                <li><a href="#et">et</a></li>
+                                <li><a href="#aut">aut</a></li>
+                                <li><a href="#not">not</a></li>
+                                <li><a href="#print">print</a></li>
+                                <li><a href="#println">println</a></li>
+                                <li><a href="#list">list</a></li>
+                                <li><a href="#get">get</a></li>
+                                <li><a href="#set">set</a></li>
+                                <li><a href="#size">size</a></li>
+                                <li><a href="#imread">imread</a></li>
+                                <li><a href="#imwrite">imwrite</a></li>
+                                <li><a href="#zeros">zeros</a></li>
+                                <li><a href="#int">int</a></li>
+                                <li><a href="#sqrt">sqrt</a></li>
+                                <li><a href="#abs">abs</a></li>
+                            </ul>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -89,11 +119,7 @@
                 are boolean expressions, typically built with built-ins like <code
                     >eqs</code
                 >, <code>gt</code>, and <code>lt</code>. Parentheses are
-                required after <code>when</code>, and blocks use braces. Note:
-                Drib doesn’t use a <code>then</code> keyword; use <code
-                    >otherwise</code
-                > for the else branch, and remember numbers are strings &#40;e.g.,
-                <code>"12"</code>&#41;.
+                required after <code>when</code>, and blocks use braces.
             </p>
 
             <div>
@@ -115,45 +141,297 @@
                     (e.g.,
                     <code>print</code>, <code>len</code>, <code>abs</code>).
                 </p>
+                <h5 id="add">add</h5>
+                <p>Sum two numeric strings; returns number string.</p>
+                <div>
+                    <code>val r = add("2", "3");</code><br />
+                    <code>println(r); // "5"</code>
+                    <br />
+                    <br />
+                </div>
+
+                <h5 id="sub">sub</h5>
+                <p>Difference of two numeric strings.</p>
+                <div>
+                    <code>val r = sub("10", "4");</code><br />
+                    <code>println(r); // "6"</code>
+                    <br />
+                    <br />
+                </div>
+
+                <h5 id="mul">mul</h5>
+                <p>Product of two numeric strings.</p>
+                <div>
+                    <code>val r = mul("6", "7");</code><br />
+                    <code>println(r); // "42"</code>
+                    <br />
+                    <br />
+                </div>
+
+                <h5 id="div">div</h5>
+                <p>
+                    Division; int division if both ints, handles 0/Infinity/NaN.
+                </p>
+                <div>
+                    <code
+                        >println(div("7", "2")); // "3" if ints, "3.5" if any
+                        float</code
+                    ><br />
+                    <code>println(div("7", "0")); // "Infinity"</code>
+                    <br />
+                    <br />
+                </div>
+
+                <h5 id="pow">pow</h5>
+                <p>Exponentiation a^b on numeric strings.</p>
+                <div>
+                    <code>println(pow("2", "8")); // "256"</code>
+                    <br />
+                    <br />
+                </div>
+
+                <h5 id="mod">mod</h5>
+                <p>Remainder a % b for numeric strings.</p>
+                <div>
+                    <code>println(mod("17", "5")); // "2"</code>
+                    <br />
+                    <br />
+                </div>
+
+                <h5 id="gt">gt</h5>
+                <p>Numeric greater-than; returns boolean.</p>
+                <div>
+                    <code>println(gt("3", "2")); // True</code>
+                    <br />
+                    <br />
+                </div>
+
+                <h5 id="lt">lt</h5>
+                <p>Numeric less-than; returns boolean.</p>
+                <div>
+                    <code>println(lt("2", "3")); // True</code>
+                    <br />
+                    <br />
+                </div>
+
+                <h5 id="geq">geq</h5>
+                <p>Numeric greater-or-equal; returns boolean.</p>
+                <div>
+                    <code>println(geq("3", "3")); // True</code>
+                    <br />
+                    <br />
+                </div>
+
+                <h5 id="leq">leq</h5>
+                <p>Numeric less-or-equal; returns boolean.</p>
+                <div>
+                    <code>println(leq("2", "3")); // True</code>
+                    <br />
+                    <br />
+                </div>
+
+                <h5 id="eqs">eqs</h5>
+                <p>Equality; numeric if possible else string compare.</p>
+                <div>
+                    <code>println(eqs("2", "2")); // True</code>
+                    <br />
+                    <br />
+                </div>
+
+                <h5 id="et">et</h5>
+                <p>Logical AND of two booleans.</p>
+                <div>
+                    <code>println(et(gt("3", "2"), lt("1", "5"))); // True</code
+                    >
+                    <br />
+                    <br />
+                </div>
+
+                <h5 id="aut">aut</h5>
+                <p>Logical OR of two booleans.</p>
+                <div>
+                    <code
+                        >println(aut(lt("3", "2"), gt("1", "0"))); // True</code
+                    >
+                    <br />
+                    <br />
+                </div>
+
+                <h5 id="not">not</h5>
+                <p>Logical NOT of a boolean.</p>
+                <div>
+                    <code>println(not(eqs("1", "2"))); // True</code>
+                    <br />
+                    <br />
+                </div>
+
+                <h5 id="print">print</h5>
+                <p>Print without trailing newline.</p>
+                <div>
+                    <code>print("Hello");</code><br />
+                    <code>println(" world!"); // same line output</code>
+                    <br />
+                    <br />
+                </div>
+
+                <h5 id="println">println</h5>
+                <p>Print with trailing newline.</p>
+                <div>
+                    <code>println("Hello, Drib!");</code>
+                    <br />
+                    <br />
+                </div>
+
+                <h5 id="list">list</h5>
+                <p>Create a list from arguments.</p>
+                <div>
+                    <code>val a = list("1", "2", "3");</code><br />
+                    <code>println(a);</code>
+                    <br />
+                    <br />
+                </div>
+
+                <h5 id="get">get</h5>
+                <p>Get element at index from list.</p>
+                <div>
+                    <code>val a = list("10", "20", "30");</code><br />
+                    <code>println(get(a, "1")); // "20"</code>
+                    <br />
+                    <br />
+                </div>
+
+                <h5 id="set">set</h5>
+                <p>Set element at index in list.</p>
+                <div>
+                    <code>val a = list("10", "20", "30");</code><br />
+                    <code>set(a, "1", "42");</code><br />
+                    <code>println(a); // "10","42","30"</code>
+                    <br />
+                    <br />
+                </div>
+
+                <h5 id="size">size</h5>
+                <p>Length of list; returns number string.</p>
+                <div>
+                    <code>val a = list("a", "b", "c");</code><br />
+                    <code>println(size(a)); // "3"</code>
+                    <br />
+                    <br />
+                </div>
+
+                <h5 id="imread">imread</h5>
+                <p>Load image as 2D array of RGB string triples.</p>
+                <div>
+                    <code>val img = imread("./examples/assets/lenna.png");</code
+                    ><br />
+                    <code
+                        >println(size(img), "x", size(get(img, "0"))); // height
+                        x width</code
+                    >
+                    <br />
+                    <br />
+                </div>
+
+                <h5 id="imwrite">imwrite</h5>
+                <p>Save 2D array of RGB ints to an image file.</p>
+                <div>
+                    <code>val img = zeros("2", "2"); // 2x2 black</code><br />
+                    <code>imwrite(img, "./out.png");</code><br />
+                    <code>println("saved ./out.png");</code>
+                    <br />
+                    <br />
+                </div>
+
+                <h5 id="zeros">zeros</h5>
+                <p>Create WxH black image (RGB "0" strings).</p>
+                <div>
+                    <code>val z = zeros("3", "2"); // width=3, height=2</code
+                    ><br />
+                    <code
+                        >println(size(z), "x", size(get(z, "0"))); // "2 x 3"</code
+                    >
+                    <br />
+                    <br />
+                </div>
+
+                <h5 id="int">int</h5>
+                <p>Convert numeric to int string; handles Infinity/NaN.</p>
+                <div>
+                    <code>println(int("3.7")); // "3"</code><br />
+                    <code>println(int("Infinity")); // "Infinity"</code>
+                    <br />
+                    <br />
+                </div>
+
+                <h5 id="sqrt">sqrt</h5>
+                <p>Square root; returns number string or "NaN".</p>
+                <div>
+                    <code>println(sqrt("9")); // "3.0"</code><br />
+                    <code>println(sqrt("-1")); // "NaN"</code>
+                    <br />
+                    <br />
+                </div>
+
+                <h5 id="abs">abs</h5>
+                <p>
+                    Absolute value; returns number string; handles Infinity/NaN.
+                </p>
+                <div>
+                    <code>println(abs("-42")); // "42"</code><br />
+                    <code>println(abs("Infinity")); // "Infinity"</code>
+                    <br />
+                    <br />
+                </div>
             </div>
         </div>
-
-        <style>
-            nav {
-                height: 70px;
-                font-family: "Bytesized", sans-serif;
-                font-weight: 400;
-                font-style: normal;
-                background-color: var(--color-blue) !important;
-                box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.5);
-                -webkit-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.5);
-                -moz-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.5);
-
-                a {
-                    line-height: 0px;
-                    letter-spacing: 3px;
-                    font-size: 24px !important;
-                    color: var(--color-white) !important;
-                }
-
-                img {
-                    margin-left: 20px;
-                    filter: invert(100%) sepia(0%) saturate(7459%)
-                        hue-rotate(32deg) brightness(107%) contrast(107%);
-                }
-            }
-
-            table,
-            th,
-            td {
-                border: none;
-                background: none;
-            }
-
-            a {
-                color: var(--color-secondary);
-                text-decoration: none;
-            }
-        </style>
     </div>
 </div>
+
+<hr />
+
+<style>
+    nav {
+        height: 70px;
+        font-family: "Bytesized", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        background-color: var(--color-blue) !important;
+        box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.5);
+
+        a {
+            line-height: 0px;
+            letter-spacing: 3px;
+            font-size: 24px !important;
+            color: var(--color-white) !important;
+        }
+
+        img {
+            margin-left: 20px;
+            filter: invert(100%) sepia(0%) saturate(7459%) hue-rotate(32deg)
+                brightness(107%) contrast(107%);
+        }
+    }
+
+    table,
+    th,
+    td {
+        border: none;
+        background: none;
+    }
+
+    a {
+        color: var(--color-secondary);
+        text-decoration: none;
+    }
+
+    .toc-sub {
+        margin: 6px 0 0 12px;
+        padding-left: 12px;
+    }
+    .toc-sub li {
+        list-style: none;
+        margin: 2px 0;
+    }
+</style>
