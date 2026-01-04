@@ -1,1 +1,159 @@
-<div>Docs</div>
+<nav class="navbar bg-body-tertiary">
+    <div class="container d-flex justify-content-center align-items-center">
+        <a class="navbar-brand" href="https://drib-lang.github.io/">
+            <img
+                src="/niltok-logo.svg"
+                alt=""
+                width="50"
+                height="40"
+                class=""
+            />
+        </a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row mt-4">
+        <div class="col">
+            <h1>The Drib Prorgamming Language</h1>
+            <h2>Language version adi 0.8.0 (Dec 14, 2025)</h2>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-4">
+            <h4>Table of Contents</h4>
+
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td><a href="#introduction">Introduction</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#variables">Variables</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#when">when... then</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#built-in">Built-in functions</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h4 id="introduction">Introduction</h4>
+            <p>
+                Drib is an esoteric programming language that represents every
+                number as a string. Arithmetic and logic are performed via
+                built-in functions operating on those string values, offering a
+                quirky, mind-bending take on computation. This project includes
+                a lightweight interpreter with a REPL, file execution, and
+                optional Python code generation.
+            </p>
+        </div>
+        <div class="col-12">
+            <h4 id="variables">Variables</h4>
+            <p>
+                A variable is a named storage location that holds a value you
+                can read and update while your program runs.
+            </p>
+            <p>
+                In Drib, variables can store strings, booleans (<code>true</code
+                >/<code>false</code>), or <code>nil</code>. Numbers are
+                represented as strings, and math is done via built-ins (e.g.,
+                <code>add</code>, <code>sub</code>).
+            </p>
+
+            <div>
+                <code>val message = "Hello";</code><br />
+                <code>println(message); // prints: Hello</code><br />
+                <code>message = "Hello, Drib!";</code><br />
+                <code>println(message); // prints: Hello, Drib!</code>
+                <br />
+                <br />
+            </div>
+        </div>
+        <div class="col-12">
+            <h4 id="when">when... then</h4>
+
+            <p>
+                Use <code>when&#40;condition&#41; {}</code> to run code only when
+                the condition evaluates to <code>true</code>, and add an
+                optional <code>otherwise {}</code> block for the false case. Conditions
+                are boolean expressions, typically built with built-ins like <code
+                    >eqs</code
+                >, <code>gt</code>, and <code>lt</code>. Parentheses are
+                required after <code>when</code>, and blocks use braces. Note:
+                Drib doesn’t use a <code>then</code> keyword; use <code
+                    >otherwise</code
+                > for the else branch, and remember numbers are strings &#40;e.g.,
+                <code>"12"</code>&#41;.
+            </p>
+
+            <div>
+                <code>val x = "12";</code><br />
+                <code>when(gt(x, "10")) &#123;</code><br />
+                <code>&emsp; println("bigger");</code><br />
+                <code>&#125; otherwise &#123;</code><br />
+                <code>&emsp; println("smaller or equal");</code><br />
+                <code>&#125;</code><br />
+                <br />
+            </div>
+        </div>
+        <div>
+            <div class="col-12">
+                <h4 id="built-in">Built-in functions</h4>
+                <p>
+                    Built-in functions are core utilities provided by a
+                    language/runtime, available without importing anything
+                    (e.g.,
+                    <code>print</code>, <code>len</code>, <code>abs</code>).
+                </p>
+            </div>
+        </div>
+
+        <style>
+            nav {
+                height: 70px;
+                font-family: "Bytesized", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                background-color: var(--color-blue) !important;
+                box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.5);
+                -webkit-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.5);
+                -moz-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.5);
+
+                a {
+                    line-height: 0px;
+                    letter-spacing: 3px;
+                    font-size: 24px !important;
+                    color: var(--color-white) !important;
+                }
+
+                img {
+                    margin-left: 20px;
+                    filter: invert(100%) sepia(0%) saturate(7459%)
+                        hue-rotate(32deg) brightness(107%) contrast(107%);
+                }
+            }
+
+            table,
+            th,
+            td {
+                border: none;
+                background: none;
+            }
+
+            a {
+                color: var(--color-secondary);
+                text-decoration: none;
+            }
+        </style>
+    </div>
+</div>
